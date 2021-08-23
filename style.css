@@ -1,0 +1,181 @@
+html, body{
+  scroll-behavior: smooth;
+  background-color: lightgray;
+  font-family: 'Cabin', sans-serif;
+  margin: 0;
+}
+a{
+  text-decoration: none;
+}
+a:link{
+  color: #FFFFFFFF;
+}
+a:visited{
+  color: #FFFFFFFF;
+}
+
+p, h2{  
+  color: #2c3338;
+}
+p{
+  font-size: 20px;
+  line-height: 1.4em;
+}
+h2{
+  font-size: 30px;
+  margin: 0;
+}
+#header{
+  position: fixed;
+  background-color: #2c3338;
+  color: #FFFFFFFF;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+}
+#header_name{
+  margin: 0;
+  padding: 3px;
+  font-size: 40px;
+}
+#navbar{
+  font-size: 25px;
+}
+#navlist{
+  list-style-type: none;
+  padding-left: 0;      /* This takes away the indentation that normally appears on lists */
+  margin: 0px -5px;     /* This is what takes away space above and below horizontal list (nav list) */
+}
+li{
+  display: inline;
+  margin: 0px 20px;
+}
+#about{
+  background-color: lightgreen;
+  padding: 90px 50px 0px 50px;
+  
+  display: grid;
+  grid-template-areas:
+    "photo1 textarea1"
+    "photo2 textarea2";
+  grid-template-columns: 400px 1fr;
+  row-gap: 30px;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+}
+@media (min-width: 768px){
+  #smalltext{
+    display: none;
+  }
+}
+@media (max-width: 768px){
+  #about{
+    grid-template-areas:
+      "photo1"
+      "textarea1"
+      "photo2"
+      "textarea2";
+    grid-template-columns: 1fr;
+    padding: 170px 10px 0px 10px;
+  }
+  #largetext{
+    display: none;
+  }
+  li{
+    display: block;
+  }
+}
+#photo1{
+  grid-area: photo1;
+  width: 300px;
+  transform: rotate(10deg);
+  box-shadow: 0 0 10px gray;
+}
+#photo2{
+  grid-area: photo2;
+  width: 300px;
+  transform: rotate(-8deg);
+  box-shadow: 0 0 8px gray;
+}
+#aboutme1{
+  grid-area: textarea1;
+}
+#aboutme2{
+  grid-area: textarea2;
+}
+#scrollmark1{                      /* Using scroll marks allow me to have the fixed header - sort of just creates dead space that is occupied by a color */
+  height: 45px;
+  background-color: lightgreen;
+}
+#scrollmark2{
+  height: 45px;
+  background-color:lightblue;
+}
+#portfolio{
+  background-color: lightblue;
+  text-align: center;
+}
+#project_container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.project_tile{
+  width: 270px;
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px gray;
+  background-color: lightgreen;
+  display: block;
+  margin: 20px;
+}
+.project_thumbnail{
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  margin: 10px;
+}
+.project_title{
+  margin-top: -8px;
+}
+#scrollmark3{
+  height: 45px;
+  background-color: lightblue;
+}
+#scrollmark4{
+  height: 45px;
+  background-color:#2c3338;
+}
+#contact{
+  background-color: #2c3338;
+  color: #FFFFFFFF;
+  padding-bottom: 20px;
+  text-align: center;
+}
+#contact h2{
+  color: #FFFFFFFF;
+  padding-top: 10px;
+}
+#contact p{
+  color: #FFFFFFFF;
+}
+#contact_container{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.logo{
+  height: 30px;
+  margin: 15px 30px 0px 30px;
+}
+.logo_title{
+  margin-top:-5px;
+}
+@media (max-width: 768px){
+  #scrollmark1, #scrollmark2, #scrollmark3, #scrollmark4{
+    height: 70px;
+  }
+}
